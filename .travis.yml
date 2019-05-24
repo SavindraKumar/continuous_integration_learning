@@ -22,7 +22,7 @@ jobs:
       - cp -r lib ../lib
       - export CPPUTEST_HOME=cpputest
       - cd ..
-      - cd..
+      - cd ..
       - cd tests && make -j
 
     - stage: build         

@@ -1,7 +1,11 @@
+stages:
+  - static_analysis
+  - build
+  
 jobs:
   include:
     - stage: "static_analysis"      
-      name: "Cppcheck"         
+      name: "cppcheck"         
       script:
       - sudo apt-get update -qq
       - sudo apt-get install -qq cppcheck

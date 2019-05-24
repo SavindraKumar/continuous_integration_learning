@@ -23,6 +23,7 @@ jobs:
       - export CPPUTEST_HOME=cpputest
       - cd ..
       - cd ..
+      - ls
       - cd cpputest/build
       - ls
  #     - cd tests && make -j

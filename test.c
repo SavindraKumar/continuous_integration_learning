@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 int main(void)
 {
@@ -13,5 +14,7 @@ int main(void)
     {
         printf("Condition Not Ok");
     }
+    
+    return 0;
 }//end main
    

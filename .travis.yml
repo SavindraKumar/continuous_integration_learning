@@ -1,13 +1,14 @@
 jobs:
   include:
-    - stage: "Static Analysis"      
-      name: "cppcheck"         
+    - stage: "static_analysis"      
+      name: "Cppcheck"         
       script:
       - sudo apt-get update -qq
       - sudo apt-get install -qq cppcheck
       - cppcheck --quiet --error-exitcode=1 . 
-    - stage: "Build"      
-      name: "Compile"         
+      
+    - stage: "build"      
+      name: "compile"         
       script: 
        - gcc test.c -o test
        - ./test

@@ -5,15 +5,12 @@ before_install:
 install: 
   # cppcheck
   - sudo apt-get install -qq cppcheck
-stages:
-  - static_analysis
-  - compile
- 
-  -stage: static_analysis
-  script:
-   - cppcheck --quiet --error-exitcode=1 --std=C99 .
+  
+#  -stage: static_analysis
+#  script:
+#   - cppcheck --quiet --error-exitcode=1 --std=C99 .
     
- -stage: compile
- script: 
-  - gcc test.c -o test
-  - ./test
+# -stage: compile
+# script: 
+#  - gcc test.c -o test
+#  - ./test

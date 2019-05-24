@@ -1,7 +1,21 @@
 language : c
 compiler : gcc
--stage : "Compile"
-name : "Compile"
-script:
-    - gcc test.c -o test
-    - ./test
+before_install:
+  - sudo apt-get update -qq
+install: 
+  # cppcheck
+  - sudo apt-get install -qq cppcheck
+stages:
+  - static_analysis
+  - compile
+ 
+cppcheck:
+  stage: static_analysis
+  script:
+   - cppcheck --quiet --error-exitcode=1 --std=C99 .
+    
+ compile:
+ stage: compile
+ script: 
+  - gcc test.c -o test
+  - ./test

@@ -11,8 +11,3 @@ install:
    script: 
    - gcc test.c -o test
    - ./test
-   
-  -stage: "Static_Analysis"
-   name: "Static_Analysis:
-   script:
-   - cppcheck --quiet --error-exitcode=1 .

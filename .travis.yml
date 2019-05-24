@@ -1,14 +1,14 @@
-language : c
-compiler : gcc
-before_install:
-  - sudo apt-get update -qq
-install: 
-  # cppcheck
-  - sudo apt-get install -qq cppcheck
-  
-script: 
-   - gcc test.c -o test
-   - ./test
-   
-script:
- - cppcheck --quiet --error-exitcode=1 . 
+jobs:
+  include:
+    - stage: "Static Analysis"      
+      name: "cppcheck"         
+      script:
+      - sudo apt-get update -qq
+      - sudo apt-get install -qq cppcheck
+      - cppcheck --quiet --error-exitcode=1 . 
+    - stage: "Build"      
+      name: "Compile"         
+      script: 
+       - gcc test.c -o test
+       - ./test
+ 

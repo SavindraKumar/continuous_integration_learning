@@ -8,4 +8,4 @@ install:
 script: 
    - gcc test.c -o test
    - ./test
-   - cppcheck --quiet --error-exitcode=1 --std=C99 .
+   - cppcheck --quiet --error-exitcode=1 .

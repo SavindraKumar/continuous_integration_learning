@@ -5,9 +5,7 @@ before_install:
 install: 
   # cppcheck
   - sudo apt-get install -qq cppcheck
-
-  -stage: "Compile"
-   name: "Compile"
-   script: 
+  
+script: 
    - gcc test.c -o test
    - ./test

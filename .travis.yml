@@ -1,10 +1,10 @@
 stages:
+  - static analysis
   - build
-  - static_analysis
   
 jobs:
   include:
-    - stage: "static_analysis"      
+    - stage: "static analysis"      
       name: "cppcheck"         
       script:
       - sudo apt-get update -qq

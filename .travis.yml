@@ -1,18 +1,17 @@
 stages:
   - static analysis
+  - unit tests
   - build
   
 jobs:
   include:
-    - stage: "static analysis"      
-      name: "cppcheck"         
+    - stage: static analysis             
       script:
       - sudo apt-get update -qq
       - sudo apt-get install -qq cppcheck
       - cppcheck --quiet --error-exitcode=1 . 
 
-    - stage: "unit tests"
-      name: "cpputest"
+    - stage: unit tests
       script:
       - git clone git://github.com/cpputest/cpputest.git
       - cd cpputest
@@ -22,10 +21,11 @@ jobs:
       - make -j
       - cp -r lib ../lib
       - export CPPUTEST_HOME=cpputest
-      - cd tests && make -j
+      - cd tests
+      - ../configure
+      - make -j
       
-    - stage: "build"      
-      name: "compile"         
+    - stage: build         
       script: 
        - gcc test.c -o test
        - ./test

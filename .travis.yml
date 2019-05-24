@@ -22,7 +22,6 @@ jobs:
       - cp -r lib ../lib
       - export CPPUTEST_HOME=cpputest
       - cd tests
-      - ../configure
       - make -j
       
     - stage: build         

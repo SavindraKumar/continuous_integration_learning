@@ -1,5 +1,7 @@
 language : c
 compiler : gcc
+-stage : "Compile"
+name : "Compile"
 script:
     - gcc test.c -o test
     - ./test

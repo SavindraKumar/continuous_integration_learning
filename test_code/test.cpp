@@ -24,5 +24,5 @@ TEST_GROUP(Test)
 
 TEST(Test, first_test)
 {
-	CHECK_TRUE(true);
+	CHECK_TRUE(false);
 }

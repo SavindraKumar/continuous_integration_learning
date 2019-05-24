@@ -22,7 +22,8 @@ jobs:
       - cp -r lib ../lib
       - export CPPUTEST_HOME=cpputest
       - cd tests
-      - make -j
+      - ls
+      - cat makefile
       
     - stage: build         
       script: 

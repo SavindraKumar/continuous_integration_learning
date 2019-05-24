@@ -5,7 +5,15 @@ before_install:
 install: 
   # cppcheck
   - sudo apt-get install -qq cppcheck
-script: 
+jobs:
+  include:
+  -stage: "Compile"
+   name: "Compile"
+   script: 
    - gcc test.c -o test
    - ./test
+   
+  -stage: "Static_Analysis"
+   name: "Static_Analysis:
+   script:
    - cppcheck --quiet --error-exitcode=1 .

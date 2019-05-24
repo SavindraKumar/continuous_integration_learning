@@ -20,13 +20,9 @@ jobs:
       - ../configure
       - make -j
       - cp -r lib ../lib
-      - export CPPUTEST_HOME=cpputest
       - cd ..
       - cd ..
-      - ls
-      - cd cpputest/build
-      - ls
- #     - cd tests && make -j
+      - cd tests && make -j
 
     - stage: build         
       script: 

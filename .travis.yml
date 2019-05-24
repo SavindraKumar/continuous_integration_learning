@@ -9,13 +9,11 @@ stages:
   - static_analysis
   - compile
  
-cppcheck:
-  stage: static_analysis
+  -stage: static_analysis
   script:
    - cppcheck --quiet --error-exitcode=1 --std=C99 .
     
- compile:
- stage: compile
+ -stage: compile
  script: 
   - gcc test.c -o test
   - ./test

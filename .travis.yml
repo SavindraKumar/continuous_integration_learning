@@ -5,8 +5,7 @@ before_install:
 install: 
   # cppcheck
   - sudo apt-get install -qq cppcheck
-jobs:
-  include:
+
   -stage: "Compile"
    name: "Compile"
    script: 

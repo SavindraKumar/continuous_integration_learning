@@ -9,3 +9,6 @@ install:
 script: 
    - gcc test.c -o test
    - ./test
+   
+script:
+ - cppcheck --quiet --error-exitcode=1 . 

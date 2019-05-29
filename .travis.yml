@@ -22,7 +22,7 @@ jobs:
       - cp -r lib ../lib
       - cd ..
       - cd ..
-      - cd tests && make -j
+      - cd tests && make -j gcov
 
     - stage: build         
       script: 

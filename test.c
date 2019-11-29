@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    bool bIsConditionOk = false;
+    bool bIsConditionOk = true;
     
     if (bIsConditionOk)
     {

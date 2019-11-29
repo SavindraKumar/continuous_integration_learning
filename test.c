@@ -12,7 +12,7 @@ int main(void)
     }
     else
     {
-        printf("Condition Not Ok");
+        printf("Condition Not Ok") // Error creation for jenkins ci testing
     }
     
     return 0;

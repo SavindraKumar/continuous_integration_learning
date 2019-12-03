@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    bool bIsConditionOk = true;
+    bool bIsConditionOk = true // mistake for jenkins demo
     
     if (bIsConditionOk)
     {

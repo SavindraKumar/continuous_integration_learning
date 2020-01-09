@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="localhost" name="Module" tests="11" time="0.007" timestamp="2020-01-09T15:14:49">
+<properties>
+</properties>
+<testcase classname="Module" name="cli_process_cmd_backspace_test" time="0.000">
+</testcase>
+<testcase classname="Module" name="cli_null_cmd_test" time="0.000">
+</testcase>
+<testcase classname="Module" name="cli_wrong_parameters_test" time="0.001">
+</testcase>
+<testcase classname="Module" name="cli_wrong_cmd_test" time="0.000">
+</testcase>
+<testcase classname="Module" name="cli_process_cmd_with_space_at_last_test" time="0.001">
+</testcase>
+<testcase classname="Module" name="cli_process_cmd_with_space_in_between_test" time="0.001">
+</testcase>
+<testcase classname="Module" name="cli_process_cmd_sum_test" time="0.001">
+</testcase>
+<testcase classname="Module" name="cli_process_cmd_info_test" time="0.002">
+</testcase>
+<testcase classname="Module" name="cli_process_cmd_help_test" time="0.001">
+</testcase>
+<testcase classname="Module" name="cli_process_cmd_null_test" time="0.000">
+<failure message="test_code/test_cli.cpp:55: expected [true]{newline}	but was  [false]{newline}	difference starts at position 0 at: [          false     ]{newline}	                                               ^" type="AssertionFailedError">
+</failure>
+</testcase>
+<testcase classname="Module" name="cli_Init_test" time="0.000">
+</testcase>
+<system-out></system-out>
+<system-err></system-err>
+</testsuite>

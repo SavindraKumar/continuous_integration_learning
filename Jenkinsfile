@@ -18,7 +18,8 @@ pipeline {
         }
         stage('Unit Test') { 
             steps {
-                pwd
+                sh 'cd tests'
+                sh 'make'
             }
         }
         stage('Code Coverage') { 

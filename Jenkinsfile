@@ -19,8 +19,8 @@ pipeline {
         stage('Unit Test') { 
             steps {
                 sh 'cd tests'
-                sh 'make'
                 sh 'pwd'
+                sh 'make'
             }
         }
         stage('Code Coverage') { 

@@ -18,9 +18,13 @@ pipeline {
         }
         stage('Unit Test') { 
             steps {
-                sh 'cd tests'
-                sh 'pwd'
-                sh 'make'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls
+                    cd tests
+                    ls
+                    make          
+                '''                
             }
         }
         stage('Code Coverage') { 

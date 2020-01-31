@@ -20,6 +20,7 @@ pipeline {
             steps {
                 sh 'cd tests'
                 sh 'make'
+                sh 'pwd'
             }
         }
         stage('Code Coverage') { 

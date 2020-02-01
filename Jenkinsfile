@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Unit Test') { 
             steps {
-                sh '''
+                bat '''
                     echo "Multiline shell steps works too"
                     ls
                     cd tests

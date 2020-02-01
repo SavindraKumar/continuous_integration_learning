@@ -21,8 +21,7 @@ pipeline {
                 bat '''
                     echo "Multiline shell steps works too"
                     dir
-                    cd tests
-                    ls        
+                    cd tests     
                 '''                
             }
         }

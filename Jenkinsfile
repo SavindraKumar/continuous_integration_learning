@@ -22,6 +22,7 @@ pipeline {
                     echo "Multiline shell steps works too"
                     dir
                     cd tests     
+                    dir
                 '''                
             }
         }

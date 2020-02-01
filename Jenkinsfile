@@ -23,6 +23,7 @@ pipeline {
                     dir
                     cd tests     
                     dir
+                    $WORKSPACE
                 '''                
             }
         }

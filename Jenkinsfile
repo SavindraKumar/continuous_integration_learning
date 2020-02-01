@@ -20,10 +20,9 @@ pipeline {
             steps {
                 bat '''
                     echo "Multiline shell steps works too"
-                    ls
+                    dir
                     cd tests
-                    ls
-                    make          
+                    ls        
                 '''                
             }
         }

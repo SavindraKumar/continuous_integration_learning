@@ -23,7 +23,6 @@ pipeline {
                     dir
                     cd tests     
                     dir
-                    $WORKSPACE
                 '''                
             }
         }
@@ -31,6 +30,12 @@ pipeline {
             steps {
                 echo 'Code Coverage'
             }
+        }
+    }
+    
+       post {
+        always {
+            junit 'build/reports/**/*.xml'
         }
     }
 }

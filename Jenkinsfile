@@ -11,7 +11,13 @@ pipeline {
                     ls
                     make
                     ./test_tests -ojunit
-                '''                
+                '''       
+                    script {
+                    def testResults = findFiles(glob: '*.xml')
+                    for(xml in testResults) {
+                        touch xml.getPath()
+                    }
+                }
             }
         }
     }

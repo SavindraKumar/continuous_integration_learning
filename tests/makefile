@@ -7,7 +7,7 @@ COMPONENT_NAME = test
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
 ifeq "$(CPPUTEST_HOME)" ""
-    CPPUTEST_HOME = /opt/cpputest
+    CPPUTEST_HOME = ../cpputest
 endif
 
 # --- SRC_FILES ---

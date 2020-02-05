@@ -12,6 +12,7 @@ pipeline {
                     make
                     ./test_tests -ojunit
                     touch *.xml
+                    echo $CPPUTEST_HOME
                 '''       
             }
         }

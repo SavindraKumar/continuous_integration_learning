@@ -1,10 +1,6 @@
 pipeline {
     agent any 
     
-    environment {
-    
-    }
-    
     stages {
         stage('Unit Test') { 
             steps {

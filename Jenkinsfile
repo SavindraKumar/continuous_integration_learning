@@ -17,11 +17,7 @@ pipeline {
     
        post {
         always {
-            sh '''
-            cd tests
-            ls
-            '''
-            junit '*.xml'
+            junit 'tests/*.xml'
         }
     }
 }

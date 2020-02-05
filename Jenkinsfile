@@ -22,11 +22,11 @@ pipeline
         }
     }
     
-    post 
-    {
-        always 
-        {
-            junit 'tests/*.xml'
-        }
-    }
+#    post 
+#    {
+#        always 
+#        {
+#            junit 'tests/*.xml'
+#        }
+#    }
 }

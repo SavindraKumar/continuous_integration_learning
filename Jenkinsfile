@@ -18,11 +18,11 @@ pipeline {
         }
         stage('Unit Test') { 
             steps {
-                bat '''
-                    echo "Multiline shell steps works too"
-                    dir
-                    cd tests     
-                    dir
+                sh '''
+                    ls
+                    cd tests
+                    ls
+                    make
                 '''                
             }
         }

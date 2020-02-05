@@ -35,7 +35,7 @@ pipeline {
     
        post {
         always {
-            junit '*.xml'
+    
             cleanWs()
         }
     }

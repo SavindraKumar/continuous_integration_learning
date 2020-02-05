@@ -22,11 +22,5 @@ pipeline
         }
     }
     
-#    post 
-#    {
-#        always 
-#        {
-#            junit 'tests/*.xml'
-#        }
-#    }
+
 }

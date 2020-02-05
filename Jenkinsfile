@@ -2,11 +2,6 @@ pipeline {
     agent any 
     
     stages {
-    stage('CleanWorkspace') {
-            steps {
-                cleanWs()
-            }
-    }
         
         stage('Unit Test') { 
             steps {

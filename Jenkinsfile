@@ -2,7 +2,7 @@ pipeline {
     agent any 
     
      environment {
-      CPPUTEST_HOME = "\opt\cpputest"
+      CPPUTEST_HOME = "/opt/cpputest"
     }
     stages {
         

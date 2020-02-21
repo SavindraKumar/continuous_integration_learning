@@ -17,14 +17,15 @@ endif
 # a library and links with the test runner.
 # This is so that test code can override production code at link time.
 SRC_FILES = \
+     ../test.c \
 
 # --- SRC_DIRS ---
 # Use SRC_DIRS to specifiy production directories
 # code files.
 # These files are compiled and put into a the
 # ProductionCode library and links with the test runner
-SRC_DIRS =  \
- 
+PRODUCTION_DIRS =  \
+     ../ \
 
 # --- TEST_SRC_FILES ---
 # TEST_SRC_FILES specifies individual test files to build.  Test
@@ -35,7 +36,7 @@ TEST_SRC_FILES = \
 # --- TEST_SRC_DIRS ---
 # Like TEST_SRC_FILES, but biulds everyting in the directory
 TEST_SRC_DIRS = \
-       test_code \
+       testcode \
 
 #	tests/example-fff \
 #	tests/fff \
@@ -53,9 +54,9 @@ INCLUDE_DIRS =  \
  .\
  $(CPPUTEST_HOME)/include \
  $(CPPUTEST_HOME)/include/Platforms/Gcc \
- $(SRC_DIRS) \
+ $(PRODUCTION_DIRS) \
  $(TEST_SRC_FILES) \
- $(MOCKS_SRC_DIRS) 
+ $(MOCKS_SRC_DIRS)
 
 
 # --- CPPUTEST_OBJS_DIR ---
@@ -85,10 +86,8 @@ CPPUTEST_LIB_DIR = build/1/2
 # build problem.  You would add this flag setting
 #     CPPUTEST_CXXFLAGS += -Wno-c++14-compat
 
-
 #gcov enable
 CPPUTEST_USE_GCOV=Y
-
 
 ifeq ($(shell $(CC) -v 2>&1 | grep -c "clang"), 1)
 CPPUTEST_WARNINGFLAGS += -Wno-unknown-warning-option
@@ -109,6 +108,7 @@ CPPUTEST_WARNINGFLAGS += -Wno-pedantic
 CPPUTEST_WARNINGFLAGS += -Wno-shadow
 CPPUTEST_WARNINGFLAGS += -Wno-missing-field-initializers
 CPPUTEST_WARNINGFLAGS += -Wno-unused-parameter
+CPPUTEST_CFLAGS += --std=c99
 CPPUTEST_CFLAGS += -Wall
 CPPUTEST_CFLAGS += -pedantic
 CPPUTEST_CFLAGS += -Wno-missing-prototypes
